@@ -40,7 +40,7 @@ private:
 int main(){
     pthread_t pid1, pid2, pid3;
     std::cout<<"build connection pool !"<<std::endl;
-    connection_pool* cp = new connection_pool("./test.log");
+    connection_pool* cp = new connection_pool("./connection_pool.log");
 
     std::cout<<"create thread !"<<std::endl;
     if(pthread_create(&pid1, NULL, &threadfunc, (void*) cp)){
